@@ -55,7 +55,7 @@ typingEffect();
 
 </script>
     </div>
-    <section id="about" data-aos="fade-up"; style="padding:50px; text-align:center;">
+    <section id="about" data-aos="fade-up" style="padding:50px; text-align:center;">
     <h2>About Me</h2> 
 
     <p  style="font-size:20px; max-width:700px; margin:auto; margin-top:20px;">
@@ -102,7 +102,7 @@ margin:10px;">
 </section>
 
 
-<section  id="skills" data-aos="fade-right";
+<section  id="skills" data-aos="fade-right"
  style="padding:50px; text-align:center;">
     <h2>My Skills</h2>
 
@@ -111,7 +111,7 @@ margin:10px;">
 <div class="skill-box">⚡ JavaScript</div>
 <div class="skill-box">💙 C++</div>
 <div class="skill-box">🌐 Web Development</div>
-<div style="width:90px; max-width: 300px; margin:auto; text-align:left;">
+<div style="width:90%; max-width: 300px; margin:auto; text-align:left;">
 
 <p>HTML - 90%</p>
 <progress value="90" max="100" style="width:100%;"></progress>
@@ -129,7 +129,7 @@ margin:10px;">
 </section>
 
 
-<section  id="projects" data-aos="zoom-in";
+<section  id="projects" data-aos="zoom-in"
  style="padding:50px; text-align:center;">
     <h2>My Projects</h2>
 
@@ -150,20 +150,23 @@ margin:10px;">
 </section>
 
 
-<section id="contact" data-aos="fade-up";
+<section id="contact" data-aos="fade-up"
 style="padding:50px; text-align:center;">
     <h2>Contact Me</h2>
 
-    <input type="text" placeholder="Your Name"
-           style="padding:10px; width:250px; margin:10px;"><br>
+    <form action="https://formsubmit.co/vinodkumarbalaii2002@gmail.com" method="POST">
 
-    <input type="email" placeholder="Your Email"
-           style="padding:10px; width:250px; margin:10px;"><br>
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
 
-    <textarea placeholder="Your Message"
-              style="padding:10px; width:250px; height:100px; margin:10px;"></textarea><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
 
-    <button>Send Message</button>
+    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Send Message</button>
+
+</form>
 </section>
 <footer style="background:#111; color:white; text-align:center; padding:20px; margin-top:50px;">
     <p>© 2026 Vinod Salvi | All Rights Reserved</p>
@@ -201,6 +204,16 @@ AOS.init({
     once: true
 });
 </script>
+<script>
+let topBtn = document.getElementById("topBtn");
 
+window.onscroll = function () {
+    if (window.scrollY > 500) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+</script>
 </body>
 </html>
