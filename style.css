@@ -257,6 +257,29 @@ body.light-mode .skill-box {
 body.light-mode a {
     color: black;
 }
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.theme-toggle {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
 
 @keyframes gradientBG {
     0% {
@@ -282,7 +305,7 @@ body.light-mode a {
 
     nav {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
         overflow-x: auto;
         justify-content: flex-start;
@@ -378,6 +401,37 @@ body.light-mode a {
         position: fixed;
         z-index: 9999;
     }
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #10254a;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        z-index: 999;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
 }
 #contact input,
 #contact textarea{
